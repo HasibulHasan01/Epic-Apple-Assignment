@@ -13,110 +13,465 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/30897cb23e.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/30897cb23e.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- lato font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- styles -->
     <style>
-        *{
-            font-family: 'Lato', sans-serif;
-        }
+      body {
+        font-family: "Lato", sans-serif;
+        margin: 0px;
+      }
     </style>
     <title>Epic Apple</title>
   </head>
   <body>
-    <header>
-        <!-- navbar starts -->
-        <div class="navbar lg:bg-[#F85559] flex justify-between w-3/4 mx-auto lg:rounded-full p-4 my-12">
-            <div class="navbar-start flex justify-between">
-              <ul class="menu menu-horizontal px-1 hidden lg:flex lg:text-white text-xl">
-                <li><a>Home</a></li>
-                <li><a>About Us</a></li>
-                <li><a>Shop</a></li>
-                <li><a>All Fruits</a></li>
-              </ul>
-              <div class="dropdown">
-                <label tabindex="0" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </label>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a>Home</a></li>
-                    <li><a>About Us</a></li>
-                    <li><a>Shop</a></li>
-                    <li><a>All Fruits</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="navbar-center lg:flex"> 
-                <img src="./images/logo.png" alt="">
-              <a class="btn btn-ghost normal-case lg:text-white font-extrabold text-3xl">Epic Apple</a>
-            </div>
-            <div class="navbar-end">
-                <div class="form-control">
-                    <div class="relative">
-                        <input type="text" placeholder="Search" class=" input w-24 rounded-full hidden lg:flex md:w-auto"/>
-                        <i class="absolute right-3 top-4 hidden lg:flex fa-solid fa-magnifying-glass"></i>
-                    </div>
-                </div>
+    <!-- header area starts -->
+    <header class="mb-28">
+      <!-- navbar starts -->
+      <div
+        class="navbar lg:bg-[#F85559] flex justify-between w-3/4 mx-auto lg:rounded-full p-4 my-12"
+      >
+        <div class="navbar-start flex justify-between">
+          <ul
+            class="menu menu-horizontal px-1 hidden lg:flex lg:text-white text-xl"
+          >
+            <li><a>Home</a></li>
+            <li><a>About Us</a></li>
+            <li><a>Shop</a></li>
+            <li><a>All Fruits</a></li>
+          </ul>
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>Home</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-center lg:flex">
+          <img src="./images/logo.png" alt="" />
+          <a
+            class="btn btn-ghost normal-case lg:text-white font-extrabold text-3xl"
+            >Epic Apple</a
+          >
+        </div>
+        <div class="navbar-end">
+          <div class="form-control">
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Search"
+                class="input w-24 rounded-full hidden lg:flex md:w-auto"
+              />
+              <i
+                class="absolute right-3 top-4 hidden lg:flex fa-solid fa-magnifying-glass"
+              ></i>
             </div>
           </div>
-        <!-- navbar ends -->
-        <!-- header carousel starts -->
-        <div class="w-3/4 mx-auto relative">
-            <div class="carousel w-full">
-                <div id="slide1" class="carousel-item relative w-full">
-                  <img src="/images/banner1.png" class="w-full"/>
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" class="btn btn-circle">❮</a> 
-                    <a href="#slide2" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-                <div id="slide2" class="carousel-item relative w-full">
-                  <img src="/images/banner2.png" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" class="btn btn-circle">❮</a> 
-                    <a href="#slide3" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-                <div id="slide3" class="carousel-item relative w-full">
-                  <img src="/images/banner3.png" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" class="btn btn-circle">❮</a> 
-                    <a href="#slide4" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-                <div id="slide4" class="carousel-item relative w-full">
-                  <img src="/images/banner4.png" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" class="btn btn-circle">❮</a> 
-                    <a href="#slide1" class="btn btn-circle">❯</a>
-                  </div>
-                </div>
-              </div>
         </div>
-        <div class="hidden lg:flex items-center bg-gray-300 w-1/2 mx-auto rounded-full absolute left-96 bottom-6">
-            <div class="text-center p-8">
-                <img src="./images/fruit1.png" alt="">
-                <p>Grapes</p>
+      </div>
+      <!-- navbar ends -->
+      <!-- header carousel starts -->
+      <div class="w-3/4 mx-auto relative">
+        <div class="carousel w-full">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="/images/banner1.png" class="w-full" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
             </div>
-            <div class="text-center p-8">
-                <img src="./images/fruit2.png" alt="">
-                <p>Orange</p>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="/images/banner2.png" class="w-full" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
             </div>
-            <div class="text-center p-8">
-                <img src="./images/fruit3.png" alt="">
-                <p>Mango</p>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="/images/banner3.png" class="w-full" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
             </div>
-            <div class="text-center p-8">
-                <img src="./images/fruit4.png" alt="">
-                <p>Strawberry</p>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <img src="/images/banner4.png" class="w-full" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
             </div>
-            <div class="text-center p-8">
-                <img src="./images/fruit5.png" alt="">
-                <p>Pomegranate</p>
-            </div>
+          </div>
         </div>
+      </div>
+      <div
+        class="hidden lg:flex items-center bg-gray-300 w-1/2 mx-auto rounded-full absolute left-96 -bottom-2"
+      >
+        <div class="text-center p-8">
+          <img src="./images/fruit1.png" alt="" />
+          <p>Grapes</p>
+        </div>
+        <div class="text-center p-8">
+          <img src="./images/fruit2.png" alt="" />
+          <p>Orange</p>
+        </div>
+        <div class="text-center p-8">
+          <img src="./images/fruit3.png" alt="" />
+          <p>Mango</p>
+        </div>
+        <div class="text-center p-8">
+          <img src="./images/fruit4.png" alt="" />
+          <p>Strawberry</p>
+        </div>
+        <div class="text-center p-8">
+          <img src="./images/fruit5.png" alt="" />
+          <p>Pomegranate</p>
+        </div>
+      </div>
+      <!-- header carousel ends -->
     </header>
+    <!-- main area starts -->
+    <main class="w-3/4 mx-auto">
+      <!-- deal of the day -->
+      <div class="flex flex-col lg:flex lg:flex-row lg:justify-between">
+        <div>
+          <h1 class="text-4xl font-bold my-6">Deal of the day</h1>
+          <p>
+            Contrary to popular belief, is not simply random text. It has roots
+            in a piece of classical <br />
+            Latin literature from 45 BC, making it over 2000 years old.
+          </p>
+        </div>
+        <div>
+          <div
+            class="grid grid-flow-col gap-2 lg:gap-5 text-center auto-cols-max my-6"
+          >
+            <div
+              class="flex flex-col p-4 bg-neutral rounded-box text-neutral-content"
+            >
+              <span class="countdown font-mono text-5xl">
+                <span style="--value: 15"></span>
+              </span>
+              days
+            </div>
+            <div
+              class="flex flex-col p-4 bg-neutral rounded-box text-neutral-content"
+            >
+              <span class="countdown font-mono text-5xl">
+                <span style="--value: 10"></span>
+              </span>
+              hours
+            </div>
+            <div
+              class="flex flex-col p-4 bg-neutral rounded-box text-neutral-content"
+            >
+              <span class="countdown font-mono text-5xl">
+                <span style="--value: 24"></span>
+              </span>
+              min
+            </div>
+            <div
+              class="flex flex-col p-4 bg-neutral rounded-box text-neutral-content"
+            >
+              <span class="countdown font-mono text-5xl">
+                <span style="--value: 29"></span>
+              </span>
+              sec
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- cards -->
+      <div class="lg:flex mt-24 gap-8">
+        <!-- card 1 -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/fruit6.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <p>Apple</p>
+            <div class="flex justify-around">
+              <i class="fa-solid fa-star text-[#F85559]"></i>
+              <i class="fa-solid fa-star-half text-[#F85559]"></i>
+              <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+              <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+              <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+            </div>
+            <div class="card-actions">
+              <button class="btn" onclick="my_modal_54.showModal()">
+                Details
+              </button>
+              <!-- Open the modal using ID.showModal() method -->
+
+              <dialog
+                id="my_modal_54"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <form method="dialog" class="modal-box">
+                  <!-- modal card -->
+                  <div class="flex justify-center">
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                      <figure class="px-10 pt-10">
+                        <img
+                          src="/images/fruit6.png"
+                          alt="Shoes"
+                          class="rounded-xl"
+                        />
+                      </figure>
+                      <div class="card-body items-center text-center">
+                        <h2 class="card-title">12.90$ - 18.85$</h2>
+                        <p>Apple</p>
+                        <p>
+                          Professional employees are there for you to pick the
+                          most amazing and fresh fruits.
+                        </p>
+                        <div class="flex justify-around">
+                          <i class="fa-solid fa-star text-[#F85559]"></i>
+                          <i class="fa-solid fa-star-half text-[#F85559]"></i>
+                          <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+                          <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+                          <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-action flex justify-center">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn text-[#F85559] border-[#F85559]">Close</button>
+                    <button class="btn bg-[#F85559] text-white">Buy Now</button>
+                  </div>
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/fruit7.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <p>Orange</p>
+            <div class="flex justify-around">
+              <i class="fa-solid fa-star text-[#F85559]"></i>
+              <i class="fa-solid fa-star-half text-[#F85559]"></i>
+              <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+              <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+              <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+            </div>
+            <div class="card-actions">
+              <button class="btn" onclick="my_modal_53.showModal()">
+                Details
+              </button>
+              <!-- Open the modal using ID.showModal() method -->
+
+              <dialog
+                id="my_modal_53"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <form method="dialog" class="modal-box">
+                  <!-- modal card -->
+                  <div class="flex justify-center">
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                      <figure class="px-10 pt-10">
+                        <img
+                          src="/images/fruit7.png"
+                          alt="Shoes"
+                          class="rounded-xl"
+                        />
+                      </figure>
+                      <div class="card-body items-center text-center">
+                        <h2 class="card-title">12.90$ - 18.85$</h2>
+                        <p>Orange</p>
+                        <p>
+                          Professional employees are there for you to pick the
+                          most amazing and fresh fruits.
+                        </p>
+                        <div class="flex justify-around">
+                          <i class="fa-solid fa-star text-[#F85559]"></i>
+                          <i class="fa-solid fa-star-half text-[#F85559]"></i>
+                          <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+                          <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+                          <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-action flex justify-center">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn text-[#F85559] border-[#F85559]">Close</button>
+                    <button class="btn bg-[#F85559] text-white">Buy Now</button>
+                  </div>
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/fruit8.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <p>Red Dragon</p>
+            <div class="flex justify-around">
+              <i class="fa-solid fa-star text-[#F85559]"></i>
+              <i class="fa-solid fa-star-half text-[#F85559]"></i>
+              <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+              <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+              <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+            </div>
+            <div class="card-actions">
+              <button class="btn" onclick="my_modal_51.showModal()">
+                Details
+              </button>
+              <!-- Open the modal using ID.showModal() method -->
+
+              <dialog
+                id="my_modal_51"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <form method="dialog" class="modal-box">
+                  <!-- modal card -->
+                  <div class="flex justify-center">
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                      <figure class="px-10 pt-10">
+                        <img
+                          src="/images/fruit8.png"
+                          alt="Shoes"
+                          class="rounded-xl"
+                        />
+                      </figure>
+                      <div class="card-body items-center text-center">
+                        <h2 class="card-title">12.90$ - 18.85$</h2>
+                        <p>Red Dragon</p>
+                        <p>
+                          Professional employees are there for you to pick the
+                          most amazing and fresh fruits.
+                        </p>
+                        <div class="flex justify-around">
+                          <i class="fa-solid fa-star text-[#F85559]"></i>
+                          <i class="fa-solid fa-star-half text-[#F85559]"></i>
+                          <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+                          <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+                          <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-action flex justify-center">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn text-[#F85559] border-[#F85559]">Close</button>
+                    <button class="btn bg-[#F85559] text-white">Buy Now</button>
+                  </div>
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+        <!-- card 4 -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/fruit9.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <p>Banana</p>
+            <div class="flex justify-around">
+              <i class="fa-solid fa-star text-[#F85559]"></i>
+              <i class="fa-solid fa-star-half text-[#F85559]"></i>
+              <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+              <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+              <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+            </div>
+            <div class="card-actions">
+              <button class="btn" onclick="my_modal_52.showModal()">
+                Details
+              </button>
+              <!-- Open the modal using ID.showModal() method -->
+
+              <dialog
+                id="my_modal_52"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <form method="dialog" class="modal-box">
+                  <!-- modal card -->
+                  <div class="flex justify-center">
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                      <figure class="px-10 pt-10">
+                        <img
+                          src="/images/fruit9.png"
+                          alt="Shoes"
+                          class="rounded-xl"
+                        />
+                      </figure>
+                      <div class="card-body items-center text-center">
+                        <h2 class="card-title">12.90$ - 18.85$</h2>
+                        <p>Banana</p>
+                        <p>
+                          Professional employees are there for you to pick the
+                          most amazing and fresh fruits.
+                        </p>
+                        <div class="flex justify-around">
+                          <i class="fa-solid fa-star text-[#F85559]"></i>
+                          <i class="fa-solid fa-star-half text-[#F85559]"></i>
+                          <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+                          <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+                          <i class="fa-regular fa-star text-[#FBC0A8]"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-action flex justify-center">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn text-[#F85559] border-[#F85559]">Close</button>
+                    <button class="btn bg-[#F85559] text-white">Buy Now</button>
+                  </div>
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <button class="btn bg-[#F85559] text-white">Shop All</button>
+      </div>
+    </main>
   </body>
 </html>
